@@ -1,0 +1,43 @@
+# Version: 10.10.0.36 (d15-2: d2270eec)
+# [first argument, ignore] # --cache
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/lib/mtouch/mtouch.exe \
+	/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache \
+	--sim \
+	/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/bin/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/StoreFinderTests.app \
+	--executable \
+	StoreFinderTests \
+	--fastdev \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	10.3 \
+	--targetver \
+	10.3 \
+	--http-message-handler=HttpClientHandler \
+	--abi=x86_64 \
+	--symbollist \
+	/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-symbols.list \
+	--dsym=no \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/MonoTouch.NUnitLite.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/iOS/bin/iPhoneSimulator/Debug/StoreFinder.iOS.exe \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll \
+	-r \
+	/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/iOS/bin/iPhoneSimulator/Debug/Calabash.dll \
+	--target-framework \
+	"Xamarin.iOS,v1.0" \
+	/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/bin/iPhoneSimulator/Debug/StoreFinderTests.exe \

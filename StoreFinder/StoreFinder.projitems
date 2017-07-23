@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{7CD4DBE3-C2D6-4829-95C1-49659AAC5020}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>StoreFinder</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)DataServices\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Adapters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Common\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DataServices\STFStoreFinderService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataServices\STFHttpResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataServices\STFHttpDataService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataServices\STFGeocodingService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\STFConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\STFAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\STFStoreFinderAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\STFStoreViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\STFViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModels\STFStoreModelsList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModels\STFDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\STFStoresListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModels\STFGeocodingModelsList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\STFGeocodingAdapter.cs" />
+  </ItemGroup>
+</Project>

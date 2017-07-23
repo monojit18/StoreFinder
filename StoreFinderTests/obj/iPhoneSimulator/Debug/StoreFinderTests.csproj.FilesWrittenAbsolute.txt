@@ -1,0 +1,12 @@
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/ibtool/_BundleResourceWithLogicalName.items
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_PartialAppManifest.items
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_BundleResourceWithLogicalName.items
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/bin/iPhoneSimulator/Debug/StoreFinderTests.pdb
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/bin/iPhoneSimulator/Debug/StoreFinderTests.exe
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/StoreFinderTests.exe
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/obj/iPhoneSimulator/Debug/StoreFinderTests.pdb
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/bin/iPhoneSimulator/Debug/StoreFinder.iOS.exe
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/bin/iPhoneSimulator/Debug/StoreFinder.iOS.pdb
+/Users/monojitd/Materials/Projects/XamarinProjects/NonGITHubProjects/StoreFinder/StoreFinderTests/bin/iPhoneSimulator/Debug/Calabash.dll

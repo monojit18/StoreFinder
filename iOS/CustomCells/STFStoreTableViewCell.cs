@@ -1,0 +1,71 @@
+﻿using System;
+using System.Text;
+using Foundation;
+using UIKit;
+using StoreFinder.Common;
+using StoreFinder.ViewModels;
+
+namespace StoreFinder.iOS.CustomCells
+{
+    public partial class STFStoreTableViewCell : UITableViewCell
+    {
+
+        private STFStoreViewModel _storeViewModel;
+
+        public static readonly NSString KeyString = new NSString(STFConstants.KStoreTableViewCellString);
+        public static readonly UINib Nib;
+
+        public static nfloat CellHeight => 110.0F;
+
+        static STFStoreTableViewCell()
+        {
+            Nib = UINib.FromName(KeyString, NSBundle.MainBundle);
+        }
+
+        protected STFStoreTableViewCell(IntPtr handle) : base(handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+
+        public void PrepareCell(STFStoreViewModel storeViewModel)
+        {
+
+            _storeViewModel = storeViewModel;
+
+            if (string.IsNullOrEmpty(storeViewModel.StoreId) == true)
+            {
+
+                ErrorView.Hidden = false;
+                ContentView.BringSubviewToFront(ErrorView);
+                ErrorLabel.Text = STFConstants.KNoLuckString;
+
+
+            }
+            else
+            {
+
+                ErrorView.Hidden = true;
+                ContentView.SendSubviewToBack(ErrorView);
+                StoreNameLabel.Text = storeViewModel?.StoreName;
+                StoreAddress1Label.Text = storeViewModel?.StoreAddressLine1;
+                StoreAddress2Label.Text = storeViewModel?.StoreAddressLine2;
+
+                var distanceText = ((double)(storeViewModel?.StoreDistance)).ToString();
+                var distanceBuilder = new StringBuilder(distanceText);
+                distanceBuilder.Append(" ").Append(STFConstants.KDistanceMilesAwayString);
+                StoreDistanceLabel.Text = distanceBuilder.ToString();
+
+                StoreImageView.Hidden = false;
+                StoreImageView.Layer.CornerRadius = 20;
+                StoreImageView.Layer.BorderWidth = (nfloat)0.5;
+
+            }
+
+            Layer.CornerRadius = (nfloat)0.5;
+            Layer.BorderWidth = (nfloat)0.5;
+            Layer.BorderColor = UIColor.FromRGB(128, 128, 128).CGColor;
+
+        }
+
+    }
+}

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Host View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="STFHostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" placeholder="Search City, State or Zip" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2uc-Kv-f24"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </variation>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELQ-vU-Dif">
+                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hKn-rm-waz">
+                                        <rect key="frame" x="270" y="0.0" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="VJb-3E-HCd"/>
+                                            <constraint firstAttribute="width" constant="37" id="oaK-zW-27k"/>
+                                        </constraints>
+                                        <color key="color" red="0.71638997395833337" green="0.22886827256944445" blue="0.32465277777777779" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A89-hJ-fEg">
+                                        <rect key="frame" x="10" y="0.0" width="44" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="d6W-Wf-CCU"/>
+                                            <constraint firstAttribute="height" constant="30" id="k97-Y4-WxR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="All">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" title="All">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EN-98-72P">
+                                        <rect key="frame" x="64" y="0.0" width="90" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SYA-eY-Qe3"/>
+                                            <constraint firstAttribute="width" constant="90" id="aIm-gc-o9Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Groceries">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PW-aS-FUH">
+                                        <rect key="frame" x="164" y="0.0" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Gwt-kP-xSh"/>
+                                            <constraint firstAttribute="height" constant="30" id="cQV-R2-Hzd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Fuel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hKn-rm-waz" secondAttribute="trailing" constant="13" id="01j-8d-IBY"/>
+                                    <constraint firstItem="hKn-rm-waz" firstAttribute="top" secondItem="ELQ-vU-Dif" secondAttribute="top" id="1Z8-3s-rtD"/>
+                                    <constraint firstAttribute="bottom" secondItem="1EN-98-72P" secondAttribute="bottom" id="3Di-hC-XMl"/>
+                                    <constraint firstAttribute="height" constant="30" id="7Pw-32-UxJ"/>
+                                    <constraint firstItem="1EN-98-72P" firstAttribute="leading" secondItem="A89-hJ-fEg" secondAttribute="trailing" constant="10" id="8nB-fT-hXh"/>
+                                    <constraint firstItem="A89-hJ-fEg" firstAttribute="leading" secondItem="ELQ-vU-Dif" secondAttribute="leading" constant="10" id="DSa-xS-PBM"/>
+                                    <constraint firstItem="1EN-98-72P" firstAttribute="top" secondItem="ELQ-vU-Dif" secondAttribute="top" id="GEb-D7-NGe"/>
+                                    <constraint firstAttribute="bottom" secondItem="6PW-aS-FUH" secondAttribute="bottom" id="HQx-nH-uiC"/>
+                                    <constraint firstItem="6PW-aS-FUH" firstAttribute="top" secondItem="ELQ-vU-Dif" secondAttribute="top" id="NB4-m4-5bs"/>
+                                    <constraint firstAttribute="bottom" secondItem="A89-hJ-fEg" secondAttribute="bottom" id="Xf4-i4-7FA"/>
+                                    <constraint firstItem="6PW-aS-FUH" firstAttribute="leading" secondItem="1EN-98-72P" secondAttribute="trailing" constant="10" id="gg6-P1-kct"/>
+                                    <constraint firstItem="A89-hJ-fEg" firstAttribute="top" secondItem="ELQ-vU-Dif" secondAttribute="top" id="pwG-Ad-1yB"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                                <rect key="frame" x="0.0" y="94" width="320" height="386"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="13">
+                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="13" id="14">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ELQ-vU-Dif" secondAttribute="trailing" id="2La-Ds-vRi"/>
+                            <constraint firstItem="ELQ-vU-Dif" firstAttribute="top" secondItem="11" secondAttribute="bottom" id="EUU-CB-Fjj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="12" secondAttribute="bottom" id="FM0-bs-CRD"/>
+                            <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="Fw4-fq-vmi"/>
+                            <constraint firstAttribute="trailing" secondItem="11" secondAttribute="trailing" id="X5g-FO-cWT"/>
+                            <constraint firstItem="11" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aOx-i5-xBY"/>
+                            <constraint firstItem="12" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k3Y-7w-Pnt"/>
+                            <constraint firstItem="12" firstAttribute="top" secondItem="ELQ-vU-Dif" secondAttribute="bottom" id="nDT-jS-ahy"/>
+                            <constraint firstItem="11" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tKw-h2-1lv"/>
+                            <constraint firstItem="ELQ-vU-Dif" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xIo-iZ-Y3b"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="11"/>
+                                <exclude reference="12"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <mask key="subviews">
+                                <include reference="11"/>
+                                <include reference="12"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="480"/>
+                    <connections>
+                        <outlet property="AllButton" destination="A89-hJ-fEg" id="name-outlet-A89-hJ-fEg"/>
+                        <outlet property="FuelButton" destination="6PW-aS-FUH" id="name-outlet-6PW-aS-FUH"/>
+                        <outlet property="GroceriesButton" destination="1EN-98-72P" id="name-outlet-1EN-98-72P"/>
+                        <outlet property="LoadingIndicatorView" destination="hKn-rm-waz" id="name-outlet-hKn-rm-waz"/>
+                        <outlet property="StoreFinderSearchBar" destination="11" id="name-outlet-11"/>
+                        <outlet property="StoreFinderTableView" destination="12" id="name-outlet-12"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
