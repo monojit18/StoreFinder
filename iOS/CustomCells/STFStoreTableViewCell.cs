@@ -61,9 +61,9 @@ namespace StoreFinder.iOS.CustomCells
 
             }
 
-            Layer.CornerRadius = (nfloat)0.5;
-            Layer.BorderWidth = (nfloat)0.5;
-            Layer.BorderColor = UIColor.FromRGB(128, 128, 128).CGColor;
+            ActualContentView.Layer.CornerRadius = (nfloat)2.0;
+            ActualContentView.Layer.BorderWidth = (nfloat)0.5;
+            ActualContentView.Layer.BorderColor = UIColor.FromRGB(128, 128, 128).CGColor;
 
         }
 

@@ -248,6 +248,7 @@ namespace StoreFinder.iOS
             }
 
             cell.Hidden = false;
+            cell.BackgroundColor = UIColor.Clear;
             var storeCell = cell as STFStoreTableViewCell;
             var storeViewModel = StoresViewModelsList[indexPath.Row];
             storeCell.PrepareCell(storeViewModel);

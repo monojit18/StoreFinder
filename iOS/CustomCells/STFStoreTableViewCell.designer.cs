@@ -15,6 +15,10 @@ namespace StoreFinder.iOS.CustomCells
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView ActualContentView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel ErrorLabel { get; set; }
 
         [Outlet]
@@ -43,6 +47,11 @@ namespace StoreFinder.iOS.CustomCells
 
         void ReleaseDesignerOutlets ()
         {
+            if (ActualContentView != null) {
+                ActualContentView.Dispose ();
+                ActualContentView = null;
+            }
+
             if (ErrorLabel != null) {
                 ErrorLabel.Dispose ();
                 ErrorLabel = null;
