@@ -16,8 +16,67 @@ namespace StoreFinder.iOS
     public partial class STFHostViewController : UIViewController
     {
 
+        private enum OptionEnum
+        {
+
+            eAll,
+            eGroceries,
+            eFuel
+
+        }
+
+
         private STFStoresListViewModel _storesListViewModel;
         private string _searchString;
+        private OptionEnum _selectedOption;
+
+        private void ClearStoreList()
+        {
+
+            if ((_storesListViewModel == null) || (_storesListViewModel.StoreViewModels == null))
+                return;            
+            
+            _storesListViewModel.StoreViewModels.Clear();
+            var tableViewSource = StoreFinderTableView.Source as STFStoresTableViewSource;
+            tableViewSource.StoresViewModelsList.Clear();
+            StoreFinderTableView.Source = tableViewSource;
+            StoreFinderTableView.ReloadData();
+
+        }
+
+        private void PositionScrollIndicatorView(OptionEnum selectedOptionEnum)
+        {
+
+            var scrollIndicatorFrame = ScrollIndicatorView.Frame;
+            nfloat scrollIndicatorLeft = 0;
+            nfloat scrollIndicatorRight = 0;         
+
+            switch(selectedOptionEnum)
+            {
+
+                case OptionEnum.eAll:
+                    scrollIndicatorLeft = AllButton.Frame.Left + 5.0F;
+                    scrollIndicatorRight = scrollIndicatorLeft + AllButton.Frame.Width;
+                    break;
+                case OptionEnum.eGroceries:
+                    scrollIndicatorLeft = GroceriesButton.Frame.Left + 5.0F;
+                    scrollIndicatorRight = scrollIndicatorLeft + GroceriesButton.Frame.Width;
+                    break;
+                case OptionEnum.eFuel:
+                    scrollIndicatorLeft = FuelButton.Frame.Left + 5.0F;
+                    scrollIndicatorRight = scrollIndicatorLeft + FuelButton.Frame.Width;
+                    break;
+
+            }
+
+            ScrollIndicatorView.Frame = CoreGraphics.CGRect.FromLTRB(scrollIndicatorLeft, scrollIndicatorFrame.Top,
+                                                                     scrollIndicatorRight,
+                                                                     scrollIndicatorFrame.Top
+                                                                     + scrollIndicatorFrame.Height);
+
+
+
+        }
 
         private async Task PopulateStoresAsync(string storeAddressString)
         {
@@ -32,12 +91,18 @@ namespace StoreFinder.iOS
             LoadingIndicatorView.StartAnimating();
 
             Task fetchTask = null;
-            if (AllButton.Selected == true)
-                fetchTask = _storesListViewModel.GetAllStoresAsync(storeAddressString);
-            else if (GroceriesButton.Selected == true)
-                fetchTask = _storesListViewModel.GetGroceryStoresAsync(storeAddressString);
-            else if (FuelButton.Selected == true)
-                fetchTask = _storesListViewModel.GetFuelStoresAsync(storeAddressString);
+            switch (_selectedOption)
+            {
+                case OptionEnum.eAll:
+                    fetchTask = _storesListViewModel.GetAllStoresAsync(storeAddressString);
+                    break;
+                case OptionEnum.eGroceries:
+                    fetchTask = _storesListViewModel.GetGroceryStoresAsync(storeAddressString);
+                    break;
+                case OptionEnum.eFuel:
+                    fetchTask = _storesListViewModel.GetFuelStoresAsync(storeAddressString);
+                    break;
+            }
 
             await fetchTask;
 
@@ -45,20 +110,32 @@ namespace StoreFinder.iOS
 
             var tableViewSource = StoreFinderTableView.Source as STFStoresTableViewSource;
 
-            //if (_storesListViewModel.StoreViewModels == null)
-            //{
+            if (_storesListViewModel.StoreViewModels == null)
+            {
 
-            //    var existingList = tableViewSource.StoresViewModelsList;
-            //    if (existingList.Count != 0)
-            //    {
+                var existingList = tableViewSource.StoresViewModelsList;
+                if (existingList != null && existingList.Count != 0)
+                {
 
-            //        var errorStoreViewModel = new STFStoreViewModel();
-            //        existingList.Insert(0, errorStoreViewModel);
-            //        _storesListViewModel.StoreViewModels = existingList;
+                    var errorStoreViewModel = new STFStoreViewModel();
+                    existingList.Insert(0, errorStoreViewModel);
+                    _storesListViewModel.StoreViewModels = existingList;
 
-            //    }
+                }
+                else
+                {
 
-            //}
+                    var alertController = UIAlertController.Create(string.Empty, STFConstants.KErrorResponseString,
+                                                                   UIAlertControllerStyle.Alert);
+                    var alertAction = UIAlertAction.Create(STFConstants.KOKButtonTitleString, UIAlertActionStyle.Cancel,
+                                                           null);
+                    alertController.AddAction(alertAction);
+                    PresentViewController(alertController, true, null);
+
+
+                }
+
+            }
 
             tableViewSource.StoresViewModelsList = _storesListViewModel.StoreViewModels;
             StoreFinderTableView.Source = tableViewSource;
@@ -70,16 +147,19 @@ namespace StoreFinder.iOS
         private void PrepareFilterButtons()
         {
 
-            AllButton.Selected = true;
-            GroceriesButton.Selected = false;
-            FuelButton.Selected = false;
+            AllButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Bold", 14);
+            _selectedOption = OptionEnum.eAll;
 
             AllButton.TouchUpInside += async (object sender, EventArgs e) => 
             {
 
-                AllButton.Selected = true;
-                GroceriesButton.Selected = false;
-                FuelButton.Selected = false;
+                AllButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Bold", 14);
+                GroceriesButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
+                FuelButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
+                _selectedOption = OptionEnum.eAll;
+                PositionScrollIndicatorView(_selectedOption);
+
+                ClearStoreList();
                 await PopulateStoresAsync(_searchString);
 
             };
@@ -87,9 +167,13 @@ namespace StoreFinder.iOS
             GroceriesButton.TouchUpInside += async (object sender, EventArgs e) =>
             {
 
-                GroceriesButton.Selected = true;
-                AllButton.Selected = false;
-                FuelButton.Selected = false;
+                AllButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
+                GroceriesButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Bold", 14);
+                FuelButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
+                _selectedOption = OptionEnum.eGroceries;
+                PositionScrollIndicatorView(_selectedOption);
+               
+                ClearStoreList();
                 await PopulateStoresAsync(_searchString);
 
             };
@@ -97,9 +181,13 @@ namespace StoreFinder.iOS
             FuelButton.TouchUpInside += async (object sender, EventArgs e) =>
             {
 
-                FuelButton.Selected = true;
-                GroceriesButton.Selected = false;
-                AllButton.Selected = false;
+                AllButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
+                GroceriesButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
+                FuelButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Bold", 14);
+                _selectedOption = OptionEnum.eFuel;
+                PositionScrollIndicatorView(_selectedOption);
+
+                ClearStoreList();
                 await PopulateStoresAsync(_searchString);
 
             };
@@ -250,10 +338,20 @@ namespace StoreFinder.iOS
             cell.Hidden = false;
             cell.BackgroundColor = UIColor.Clear;
             var storeCell = cell as STFStoreTableViewCell;
-            var storeViewModel = StoresViewModelsList[indexPath.Row];
+            var storeViewModel = StoresViewModelsList[indexPath.Section];
             storeCell.PrepareCell(storeViewModel);
             return storeCell;
 
+        }
+
+        public override nfloat GetHeightForHeader(UITableView tableView, nint section)
+        {
+            return STFConstants.KSectionHeaderHeigthValue;
+        }
+
+        public override nfloat GetHeightForFooter(UITableView tableView, nint section)
+        {
+            return STFConstants.KSectionHeaderHeigthValue;
         }
     }
 }

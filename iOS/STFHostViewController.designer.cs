@@ -31,6 +31,10 @@ namespace StoreFinder.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView ScrollIndicatorView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISearchBar StoreFinderSearchBar { get; set; }
 
         [Outlet]
@@ -57,6 +61,11 @@ namespace StoreFinder.iOS
             if (LoadingIndicatorView != null) {
                 LoadingIndicatorView.Dispose ();
                 LoadingIndicatorView = null;
+            }
+
+            if (ScrollIndicatorView != null) {
+                ScrollIndicatorView.Dispose ();
+                ScrollIndicatorView = null;
             }
 
             if (StoreFinderSearchBar != null) {

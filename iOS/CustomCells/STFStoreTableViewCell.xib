@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -15,19 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00r-XC-lRY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CD6-3b-Qfi">
-                                <rect key="frame" x="120" y="35" width="120" height="30"/>
+                                <rect key="frame" x="10" y="20.5" width="300" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="7gm-wP-eQI"/>
-                                    <constraint firstAttribute="height" constant="30" id="VgH-KW-g9B"/>
+                                    <constraint firstAttribute="height" constant="70" id="VgH-KW-g9B"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -36,55 +35,54 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="320" id="4"/>
                             <constraint firstAttribute="height" constant="110" id="5"/>
-                            <constraint firstAttribute="bottom" secondItem="CD6-3b-Qfi" secondAttribute="bottom" constant="45" id="16I-rX-T5f"/>
-                            <constraint firstItem="CD6-3b-Qfi" firstAttribute="top" secondItem="00r-XC-lRY" secondAttribute="top" constant="35" id="Tn2-tN-51B"/>
-                            <constraint firstAttribute="trailing" secondItem="CD6-3b-Qfi" secondAttribute="trailing" constant="80" id="TuT-5R-g1B"/>
-                            <constraint firstItem="CD6-3b-Qfi" firstAttribute="leading" secondItem="00r-XC-lRY" secondAttribute="leading" constant="120" id="b67-55-u2H"/>
+                            <constraint firstItem="CD6-3b-Qfi" firstAttribute="centerY" secondItem="00r-XC-lRY" secondAttribute="centerY" constant="0.5" id="I4N-m1-YhE"/>
+                            <constraint firstAttribute="trailing" secondItem="CD6-3b-Qfi" secondAttribute="trailing" constant="10" id="TuT-5R-g1B"/>
+                            <constraint firstItem="CD6-3b-Qfi" firstAttribute="leading" secondItem="00r-XC-lRY" secondAttribute="leading" constant="10" id="b67-55-u2H"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjM-mz-AF5" misplaced="YES">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjM-mz-AF5">
                         <rect key="frame" x="10" y="0.0" width="300" height="110"/>
                         <subviews>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="productImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="NIX-OC-kAK">
-                                <rect key="frame" x="10" y="15" width="40" height="40"/>
+                                <rect key="frame" x="10" y="30.5" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="3ri-Lc-jTK"/>
-                                    <constraint firstAttribute="height" constant="40" id="AXm-69-AXF"/>
+                                    <constraint firstAttribute="width" constant="50" id="3ri-Lc-jTK"/>
+                                    <constraint firstAttribute="height" constant="50" id="AXm-69-AXF"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMN-Lt-IWx">
-                                <rect key="frame" x="70" y="15" width="230" height="21"/>
+                                <rect key="frame" x="80" y="15" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Qkb-qL-kgy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3h-SW-vY7">
-                                <rect key="frame" x="70" y="38" width="230" height="21"/>
+                                <rect key="frame" x="80" y="38" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="7Ls-qS-2t7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYo-Oz-4AW">
-                                <rect key="frame" x="70" y="59" width="230" height="21"/>
+                                <rect key="frame" x="80" y="59" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Nh2-ZY-Ca7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5K-DW-UYj">
-                                <rect key="frame" x="70" y="80" width="230" height="21"/>
+                                <rect key="frame" x="80" y="80" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="W82-HK-Qjx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -92,19 +90,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="A5K-DW-UYj" firstAttribute="top" secondItem="MYo-Oz-4AW" secondAttribute="bottom" id="0DX-2f-gm0"/>
-                            <constraint firstAttribute="trailing" secondItem="A5K-DW-UYj" secondAttribute="trailing" id="2n0-iH-GqW"/>
-                            <constraint firstItem="MYo-Oz-4AW" firstAttribute="leading" secondItem="A3h-SW-vY7" secondAttribute="leading" id="56i-hQ-i6a"/>
-                            <constraint firstAttribute="trailing" secondItem="SMN-Lt-IWx" secondAttribute="trailing" id="BYD-cf-ikc"/>
+                            <constraint firstItem="A5K-DW-UYj" firstAttribute="leading" secondItem="SMN-Lt-IWx" secondAttribute="leading" id="0uB-at-2zB"/>
+                            <constraint firstAttribute="trailing" secondItem="A5K-DW-UYj" secondAttribute="trailing" constant="20" id="2n0-iH-GqW"/>
+                            <constraint firstItem="NIX-OC-kAK" firstAttribute="centerY" secondItem="UjM-mz-AF5" secondAttribute="centerY" constant="0.5" id="5xi-kc-9a8"/>
+                            <constraint firstAttribute="trailing" secondItem="SMN-Lt-IWx" secondAttribute="trailing" constant="20" id="BYD-cf-ikc"/>
                             <constraint firstItem="A3h-SW-vY7" firstAttribute="top" secondItem="SMN-Lt-IWx" secondAttribute="bottom" constant="2" id="Lud-XQ-f4a"/>
-                            <constraint firstItem="A3h-SW-vY7" firstAttribute="leading" secondItem="NIX-OC-kAK" secondAttribute="trailing" constant="20" id="P9h-5x-dRp"/>
+                            <constraint firstItem="A3h-SW-vY7" firstAttribute="leading" secondItem="SMN-Lt-IWx" secondAttribute="leading" id="MU3-3r-Jvm"/>
                             <constraint firstItem="MYo-Oz-4AW" firstAttribute="top" secondItem="A3h-SW-vY7" secondAttribute="bottom" id="Plo-Gj-Rf7"/>
-                            <constraint firstAttribute="trailing" secondItem="A3h-SW-vY7" secondAttribute="trailing" id="SDI-UG-ZQV"/>
-                            <constraint firstItem="A5K-DW-UYj" firstAttribute="leading" secondItem="A3h-SW-vY7" secondAttribute="leading" id="SWa-2n-cbv"/>
+                            <constraint firstItem="MYo-Oz-4AW" firstAttribute="leading" secondItem="SMN-Lt-IWx" secondAttribute="leading" id="RLh-qk-1Rn"/>
+                            <constraint firstAttribute="trailing" secondItem="A3h-SW-vY7" secondAttribute="trailing" constant="20" id="SDI-UG-ZQV"/>
                             <constraint firstItem="NIX-OC-kAK" firstAttribute="leading" secondItem="UjM-mz-AF5" secondAttribute="leading" constant="10" id="U1Z-TE-cDt"/>
-                            <constraint firstAttribute="trailing" secondItem="MYo-Oz-4AW" secondAttribute="trailing" id="VYc-TF-iuN"/>
+                            <constraint firstAttribute="trailing" secondItem="MYo-Oz-4AW" secondAttribute="trailing" constant="20" id="VYc-TF-iuN"/>
                             <constraint firstItem="SMN-Lt-IWx" firstAttribute="top" secondItem="UjM-mz-AF5" secondAttribute="top" constant="15" id="d5V-mM-aML"/>
-                            <constraint firstItem="NIX-OC-kAK" firstAttribute="top" secondItem="UjM-mz-AF5" secondAttribute="top" constant="15" id="iKX-Zp-kn4"/>
-                            <constraint firstItem="SMN-Lt-IWx" firstAttribute="leading" secondItem="NIX-OC-kAK" secondAttribute="trailing" constant="20" id="pxJ-oD-dY9"/>
+                            <constraint firstItem="SMN-Lt-IWx" firstAttribute="leading" secondItem="UjM-mz-AF5" secondAttribute="leading" constant="80" id="uif-p9-9Oi"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -119,6 +117,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="ActualContentView" destination="UjM-mz-AF5" id="name-outlet-UjM-mz-AF5"/>
                 <outlet property="ErrorLabel" destination="CD6-3b-Qfi" id="name-outlet-CD6-3b-Qfi"/>
                 <outlet property="ErrorView" destination="00r-XC-lRY" id="name-outlet-00r-XC-lRY"/>
                 <outlet property="StoreAddress1Label" destination="A3h-SW-vY7" id="name-outlet-A3h-SW-vY7"/>
@@ -126,7 +125,6 @@
                 <outlet property="StoreDistanceLabel" destination="A5K-DW-UYj" id="name-outlet-A5K-DW-UYj"/>
                 <outlet property="StoreImageView" destination="NIX-OC-kAK" id="name-outlet-NIX-OC-kAK"/>
                 <outlet property="StoreNameLabel" destination="SMN-Lt-IWx" id="name-outlet-SMN-Lt-IWx"/>
-                <outlet property="ActualContentView" destination="UjM-mz-AF5" id="name-outlet-UjM-mz-AF5"/>
             </connections>
             <point key="canvasLocation" x="19" y="-229"/>
         </tableViewCell>

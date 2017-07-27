@@ -38,6 +38,8 @@ namespace StoreFinder.iOS.CustomCells
                 ErrorView.Hidden = false;
                 ContentView.BringSubviewToFront(ErrorView);
                 ErrorLabel.Text = STFConstants.KNoLuckString;
+                ErrorView.Layer.BorderColor = UIColor.Clear.CGColor;
+                ActualContentView.Hidden = true;
 
 
             }
@@ -46,6 +48,7 @@ namespace StoreFinder.iOS.CustomCells
 
                 ErrorView.Hidden = true;
                 ContentView.SendSubviewToBack(ErrorView);
+                ActualContentView.Hidden = false;
                 StoreNameLabel.Text = storeViewModel?.StoreName;
                 StoreAddress1Label.Text = storeViewModel?.StoreAddressLine1;
                 StoreAddress2Label.Text = storeViewModel?.StoreAddressLine2;
@@ -56,14 +59,14 @@ namespace StoreFinder.iOS.CustomCells
                 StoreDistanceLabel.Text = distanceBuilder.ToString();
 
                 StoreImageView.Hidden = false;
-                StoreImageView.Layer.CornerRadius = 20;
+                StoreImageView.Layer.CornerRadius = 25;
                 StoreImageView.Layer.BorderWidth = (nfloat)0.5;
 
-            }
+                ActualContentView.Layer.CornerRadius = (nfloat)5.0;
+                ActualContentView.Layer.BorderWidth = (nfloat)0.5;
+                ActualContentView.Layer.BorderColor = UIColor.Clear.CGColor;
 
-            ActualContentView.Layer.CornerRadius = (nfloat)2.0;
-            ActualContentView.Layer.BorderWidth = (nfloat)0.5;
-            ActualContentView.Layer.BorderColor = UIColor.FromRGB(128, 128, 128).CGColor;
+            }
 
         }
 

@@ -26,8 +26,12 @@ namespace StoreFinder.Common
         public const string KStoreTableViewCellString = "STFStoreTableViewCell";
         public const string KStoresCellReuseIdentifierString = "Stores";
         public const string KDistanceMilesAwayString = "Miles Away";
-        public const string KNoLuckString = "Sorry No Luck!!";
+        public const string KNoLuckString = "Sorry, no Luck. Here are the closest stores near your search";
+        public const string KErrorResponseString = "Please enter a valid five-digit zip code, city or state to search";
+        public const string KOKButtonTitleString = "OK";
 		public const int KSearchLimitValue = 10;
+        public const float KSectionHeaderHeigthValue = 5.0F;
+        public const float KSectionFooterHeigthValue = 5.0F;
 
 
     }
