@@ -147,15 +147,19 @@ namespace StoreFinder.iOS
         private void PrepareFilterButtons()
         {
 
-            AllButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Bold", 14);
+            AllButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameBoldString,
+                                                        STFConstants.KButtonFontSize);
             _selectedOption = OptionEnum.eAll;
 
             AllButton.TouchUpInside += async (object sender, EventArgs e) => 
             {
 
-                AllButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Bold", 14);
-                GroceriesButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
-                FuelButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
+                AllButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameBoldString,
+                                                            STFConstants.KButtonFontSize);
+                GroceriesButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameRegularString,
+                                                                  STFConstants.KButtonFontSize);
+                FuelButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameRegularString,
+                                                             STFConstants.KButtonFontSize);
                 _selectedOption = OptionEnum.eAll;
                 PositionScrollIndicatorView(_selectedOption);
 
@@ -167,9 +171,12 @@ namespace StoreFinder.iOS
             GroceriesButton.TouchUpInside += async (object sender, EventArgs e) =>
             {
 
-                AllButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
-                GroceriesButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Bold", 14);
-                FuelButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
+                AllButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameRegularString,
+                                                            STFConstants.KButtonFontSize);
+                GroceriesButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameBoldString,
+                                                                  STFConstants.KButtonFontSize);
+                FuelButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameRegularString,
+                                                             STFConstants.KButtonFontSize);
                 _selectedOption = OptionEnum.eGroceries;
                 PositionScrollIndicatorView(_selectedOption);
                
@@ -181,9 +188,12 @@ namespace StoreFinder.iOS
             FuelButton.TouchUpInside += async (object sender, EventArgs e) =>
             {
 
-                AllButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
-                GroceriesButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Regular", 14);
-                FuelButton.TitleLabel.Font = UIFont.FromName("AvenirNext-Bold", 14);
+                AllButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameRegularString,
+                                                            STFConstants.KButtonFontSize);
+                GroceriesButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameRegularString,
+                                                            STFConstants.KButtonFontSize);
+                FuelButton.TitleLabel.Font = UIFont.FromName(STFConstants.KButtonFontNameBoldString,
+                                                             STFConstants.KButtonFontSize);
                 _selectedOption = OptionEnum.eFuel;
                 PositionScrollIndicatorView(_selectedOption);
 

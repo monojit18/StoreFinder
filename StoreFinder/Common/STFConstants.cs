@@ -29,6 +29,9 @@ namespace StoreFinder.Common
         public const string KNoLuckString = "Sorry, no Luck. Here are the closest stores near your search";
         public const string KErrorResponseString = "Please enter a valid five-digit zip code, city or state to search";
         public const string KOKButtonTitleString = "OK";
+        public const string KButtonFontNameBoldString = "AvenirNext-Bold";
+        public const string KButtonFontNameRegularString = "AvenirNext-Regular";
+        public const float KButtonFontSize = 14.0F;
 		public const int KSearchLimitValue = 10;
         public const float KSectionHeaderHeigthValue = 5.0F;
         public const float KSectionFooterHeigthValue = 5.0F;
